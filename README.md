@@ -1,2 +1,224 @@
-# vente-formation-agent-de-terrain
-page de vente pour une formation en ligne (au Cameroun) qui apprend à créer et vendre des "agents IA" dans trois secteurs : suivi de production minière, analyse de données géologiques/pétrolières, et automatisation de boutiques en ligne (réponse clients, relance de paniers).htm
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Agents IA Terrain — Mines, Pétrole & Commerce en ligne | Formation Cameroun</title>
+<meta name="description" content="Formation pratique pour créer des agents IA : suivi de production minière, analyse de données géologiques et pétrolières, et vente en ligne automatisée. Sans code.">
+<meta name="keywords" content="agent IA Cameroun, gagner argent internet Cameroun, formation en ligne Cameroun, IA secteur minier, analyse données géologiques, IA pétrole Afrique, formation IA e-commerce Douala Yaoundé, automatisation minière, business en ligne Cameroun, devenir entrepreneur IA Afrique">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1C1B19; --paper:#F2EEE6; --ochre:#C97A2B; --teal:#2B6E6E; --purple:#6B4E8C; --line:#D8D1C0;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px); scroll-behavior:smooth}
+html,body{height:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',system-ui,sans-serif;line-height:1.5;overflow-x:hidden}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;margin:0;font-weight:600}
+.wrap{max-width:920px;margin:0 auto;padding:0 24px}
+header{position:relative;padding:64px 0 48px;border-bottom:1px solid var(--line);background:
+  radial-gradient(circle at 85% 10%, rgba(201,122,43,0.15), transparent 45%),
+  radial-gradient(circle at 10% 90%, rgba(43,110,110,0.12), transparent 45%)}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--ochre);margin:0 0 16px;letter-spacing:.02em;text-transform:uppercase;font-weight:500}
+.badge svg{width:14px;height:14px}
+h1{font-size:clamp(30px,5vw,48px);line-height:1.08;max-width:15ch}
+.sub{max-width:54ch;font-size:18px;margin-top:18px;color:#4A453C}
+.cta{display:inline-flex;align-items:center;gap:8px;margin-top:28px;background:var(--ink);color:var(--paper);padding:15px 28px;border-radius:3px;text-decoration:none;font-weight:500;font-size:16px;transition:transform .15s ease,box-shadow .15s ease;box-shadow:0 2px 0 var(--ochre)}
+.cta:active{transform:translateY(2px);box-shadow:0 0 0 var(--ochre)}
+section{padding:48px 0;border-bottom:1px solid var(--line)}
+.eyebrow{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:#8A8472;margin-bottom:8px;font-weight:500}
+.split{display:grid;grid-template-columns:1fr;gap:0;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.panel{padding:30px;transition:background .2s ease}
+.panel.mine{background:#EFE6D8;border-bottom:1px solid var(--line)}
+.panel.shop{background:#E7EEEC;border-bottom:1px solid var(--line)}
+.panel.geo{background:#EAE3F0}
+.icon-circle{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.panel.mine .icon-circle{background:#C97A2B22}
+.panel.shop .icon-circle{background:#2B6E6E22}
+.panel.geo .icon-circle{background:#6B4E8C22}
+.icon-circle svg{width:22px;height:22px}
+.panel h3{font-size:22px;margin-bottom:6px}
+.panel.mine h3{color:var(--ochre)}
+.panel.shop h3{color:var(--teal)}
+.panel.geo h3{color:var(--purple)}
+.panel p{margin:0;color:#4A453C;font-size:15px}
+.panel ul{margin:14px 0 0;padding-left:18px;font-size:15px;color:#3A362F}
+.panel li{margin-bottom:6px}
+.steps{counter-reset:s}
+.step{display:flex;gap:18px;padding:20px 0;border-top:1px solid var(--line);cursor:default}
+.step:first-child{border-top:none}
+.step .n{font-family:'Fraunces',serif;font-size:24px;color:var(--ochre);min-width:36px;transition:color .2s}
+.step:hover .n{color:var(--teal)}
+.step h4{font-size:17px;font-family:'IBM Plex Sans';font-weight:600;margin-bottom:4px}
+.step p{margin:0;color:#4A453C;font-size:15px}
+.price{position:relative;background:var(--ink);color:var(--paper);padding:40px 30px;border-radius:6px;overflow:hidden}
+.price::before{content:"";position:absolute;top:-40%;right:-20%;width:300px;height:300px;background:radial-gradient(circle,rgba(201,122,43,.25),transparent 70%);pointer-events:none}
+.price h2{color:var(--paper);font-size:28px;position:relative}
+.price .amount{font-size:46px;margin:14px 0;font-family:'Fraunces',serif;position:relative}
+.price .amount small{font-size:16px;font-weight:400;color:#C9C4B6}
+.price ul{padding-left:18px;margin:18px 0;position:relative}
+.price li{margin-bottom:8px;font-size:15px}
+.price .cta{background:var(--ochre);color:var(--ink);box-shadow:0 2px 0 #8f5a1f}
+.pay-box{background:#2A2924;padding:20px 22px;border-radius:4px;margin-top:22px;position:relative}
+.pay-box p{margin:0 0 8px;font-size:14px;color:#C9C4B6}
+.pay-box .big{margin:0;font-size:18px}
+.faq details{border-top:1px solid var(--line);padding:16px 0}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;font-weight:500;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq summary::after{content:"+";font-size:20px;color:var(--ochre);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{color:#4A453C;font-size:15px;margin:10px 0 0}
+footer{padding:36px 0 60px;font-size:13px;color:#8A8472;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <p class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg> Formation pratique — Agents IA</p>
+  <h1>Mettez un agent IA au travail dans une mine, un site pétrolier ou une boutique en ligne</h1>
+  <p class="sub">Une formation pas-à-pas pour installer, configurer et vendre des agents IA prêts à l'emploi : suivi de production minière, analyse de données géologiques et pétrolières, et vente en ligne automatisée. Sans code, sans jargon technique.</p>
+  <a class="cta" href="#prix">Voir la formation <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <svg class="hero-art" viewBox="0 0 800 180" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:640px;margin-top:40px;display:block">
+    <line x1="0" y1="160" x2="800" y2="160" stroke="#D8D1C0" stroke-width="2"/>
+    <g stroke="#C97A2B" stroke-width="3" fill="none" stroke-linecap="round">
+      <path d="M100 160 L130 60 L160 160"/>
+      <path d="M108 130 L152 130 M113 100 L147 100 M118 75 L142 75"/>
+      <line x1="130" y1="20" x2="130" y2="60" stroke-width="4"/>
+    </g>
+    <path d="M230 160 L290 90 L330 130 L380 70 L430 160 Z" fill="#EFE6D8" stroke="#C97A2B" stroke-width="2.5"/>
+    <circle cx="300" cy="60" r="14" fill="none" stroke="#C97A2B" stroke-width="2.5"/>
+    <g stroke="#2B6E6E" stroke-width="3" fill="#E7EEEC">
+      <path d="M500 90 h80 l10 70 h-100 z"/>
+      <path d="M515 90 v-15 a15 15 0 0 1 30 0 v15" fill="none"/>
+    </g>
+    <g stroke="#6B4E8C" stroke-width="2.5" fill="none">
+      <path d="M650 160 v-70 h90 v70"/>
+      <line x1="650" y1="120" x2="740" y2="120"/>
+      <line x1="650" y1="140" x2="740" y2="140"/>
+      <line x1="650" y1="100" x2="740" y2="100"/>
+    </g>
+  </svg>
+</header>
+
+<section>
+  <p class="eyebrow">Pourquoi maintenant</p>
+  <h2 style="font-size:26px;margin-bottom:14px">À quoi sert un agent IA, concrètement</h2>
+  <p style="font-size:16px;color:#4A453C;max-width:62ch;margin:0 0 16px">Un agent IA, c'est un assistant numérique qui travaille pour vous en continu : il répond aux clients, surveille une production, trie des données — sans jamais dormir, sans jamais oublier. Ce que faisait autrefois une équipe entière, un agent bien configuré peut le faire en tâche de fond, pendant que vous vous concentrez sur ce qui compte vraiment.</p>
+</section>
+
+<section>
+  <p class="eyebrow">Trois modules</p>
+  <h2 style="font-size:26px;margin-bottom:22px">Trois secteurs, une seule méthode</h2>
+  <div class="split">
+    <div class="panel mine">
+      <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#C97A2B" stroke-width="2"><path d="M14 4l6 6-9 9-6-6z"/><path d="M6 13l-3 7 7-3"/></svg></div>
+      <h3>Agent Mine</h3>
+      <p>Suit la production, les arrêts machines et les incidents sur un site, et sort un rapport quotidien avec alertes.</p>
+      <ul>
+        <li>Rapport journalier automatique</li>
+        <li>Alertes en cas de retard ou d'anomalie</li>
+        <li>Vendable aux PME minières et sous-traitants</li>
+      </ul>
+    </div>
+    <div class="panel shop">
+      <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#2B6E6E" stroke-width="2"><path d="M3 3h2l2.4 12.4a2 2 0 002 1.6h8.2a2 2 0 002-1.6L21 8H6"/><circle cx="9" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg></div>
+      <h3>Agent Boutique</h3>
+      <p>Répond aux clients, relance les paniers abandonnés et recommande des produits, 24h/24.</p>
+      <ul>
+        <li>Réponses instantanées aux clients</li>
+        <li>Relance automatique des ventes perdues</li>
+        <li>Vendable aux boutiques en ligne et vendeurs sur réseaux sociaux</li>
+      </ul>
+    </div>
+    <div class="panel geo">
+      <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#6B4E8C" stroke-width="2"><path d="M3 21h18M5 21V9l4-4 4 4v12M13 21V13l3-3 3 3v8"/></svg></div>
+      <h3>Module Données Géologiques & Pétrolières</h3>
+      <p>Apprenez à structurer et interpréter des relevés géologiques et pétroliers pour produire des synthèses claires destinées aux décideurs.</p>
+      <ul>
+        <li>Méthode de collecte et de classement des données de terrain</li>
+        <li>Modèles de synthèse pour ingénieurs et investisseurs</li>
+        <li>Ce module enseigne la méthode — il ne remplace pas un logiciel de géologie certifié</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Programme</p>
+  <h2 style="font-size:26px;margin-bottom:8px">Ce que contient la formation</h2>
+  <div class="steps">
+    <div class="step"><span class="n">1</span><div><h4>Choisir son secteur de départ</h4><p>Comment décider selon votre réseau et vos premiers contacts.</p></div></div>
+    <div class="step"><span class="n">2</span><div><h4>Monter l'agent sans coder</h4><p>Les outils exacts à utiliser, étape par étape, avec captures d'écran.</p></div></div>
+    <div class="step"><span class="n">3</span><div><h4>Trouver les 5 premiers clients</h4><p>Scripts de démarchage et offre d'essai pour obtenir vos premières preuves de résultats.</p></div></div>
+    <div class="step"><span class="n">4</span><div><h4>Fixer son prix et facturer</h4><p>Grille tarifaire type et modèle de contrat simple.</p></div></div>
+    <div class="step"><span class="n">5</span><div><h4>Faire grandir le portefeuille clients</h4><p>Comment passer de 5 à 30 clients sans y passer vos journées.</p></div></div>
+    <div class="step"><span class="n">6</span><div><h4>Analyser des données géologiques et pétrolières</h4><p>Méthode complète de collecte, nettoyage et synthèse, avec modèle de rapport.</p></div></div>
+    <div class="step"><span class="n">7</span><div><h4>Relier géologie et vente en ligne</h4><p>Vendre vos rapports comme produit numérique via les mêmes techniques que l'Agent Boutique.</p></div></div>
+  </div>
+</section>
+
+<section id="prix">
+  <svg viewBox="0 0 800 80" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:500px;display:block;margin:0 auto 30px">
+    <g stroke="#8A8472" stroke-width="1.5" fill="none" opacity="0.6">
+      <circle cx="60" cy="40" r="22"/>
+      <path d="M52 40 l6 6 12-14"/>
+      <circle cx="400" cy="40" r="22"/>
+      <path d="M392 40 l6 6 12-14"/>
+      <circle cx="740" cy="40" r="22"/>
+      <path d="M732 40 l6 6 12-14"/>
+      <line x1="90" y1="40" x2="370" y2="40" stroke-dasharray="4 4"/>
+      <line x1="430" y1="40" x2="710" y2="40" stroke-dasharray="4 4"/>
+    </g>
+  </svg>
+  <div class="price">
+    <h2>Formation complète</h2>
+    <p style="color:#C9C4B6;font-size:15px;position:relative">Accès immédiat, à vie — 7 modules</p>
+    <div class="amount">75 000 F <small>paiement unique</small></div>
+    <ul>
+      <li>Les 7 modules détaillés (Mine + Boutique + Géologie/Pétrole)</li>
+      <li>Les scripts de démarchage prêts à copier</li>
+      <li>Le modèle de rapport et de contrat client</li>
+      <li>La grille tarifaire type</li>
+    </ul>
+    <div class="pay-box">
+      <p>Pour commander — Cameroun</p>
+      <p class="big">Paiement Orange Money au <strong>698 146 028</strong></p>
+      <p style="margin-top:10px">Envoyez ensuite une capture du paiement par WhatsApp au même numéro pour recevoir la formation immédiatement.</p>
+    </div>
+    <div class="pay-box">
+      <p>Hors Cameroun</p>
+      <p style="color:#EDE9DD;font-size:15px">Contactez le <strong>+237 698 146 028</strong> sur WhatsApp pour organiser le paiement.</p>
+    </div>
+    <a class="cta" href="https://wa.me/237698146028" style="margin-top:16px">Contacter sur WhatsApp <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Avis</p>
+  <h2 style="font-size:26px;margin-bottom:18px">Soyez parmi les premiers</h2>
+  <div style="border:1px dashed var(--line);border-radius:6px;padding:28px;text-align:center;background:#EFE6D822">
+    <p style="margin:0 0 6px;font-size:16px;color:#4A453C">Cette formation vient tout juste d'être lancée.</p>
+    <p style="margin:0;font-size:15px;color:#8A8472">Les témoignages des premiers clients apparaîtront ici dès qu'ils seront disponibles — place à une vraie expérience plutôt qu'à des avis inventés.</p>
+  </div>
+</section>
+
+<section class="faq">
+  <p class="eyebrow">Questions fréquentes</p>
+  <h2 style="font-size:26px;margin-bottom:8px">Ce que les gens demandent</h2>
+  <details><summary>Je ne connais rien à l'IA, est-ce grave ?</summary><p>Non. La formation part de zéro et donne les outils exacts, sans code.</p></details>
+  <details><summary>Est-ce que ça marche sans compétence technique ?</summary><p>Oui, chaque étape est expliquée avec des captures d'écran et des modèles à copier.</p></details>
+  <details><summary>Combien de temps avant les premiers clients ?</summary><p>Cela dépend de votre rythme de démarchage — la formation donne les scripts, le reste dépend de vous.</p></details>
+  <details><summary>Le module géologie remplace-t-il un logiciel professionnel ?</summary><p>Non, il enseigne une méthode d'organisation et de synthèse des données. La validation technique finale doit toujours revenir à un ingénieur ou géologue qualifié.</p></details>
+  <details><summary>75 000 F, n'est-ce pas cher ?</summary><p>C'est un paiement unique pour un accès à vie à 7 modules, contre un abonnement mensuel classique pour ce type de contenu ailleurs. Comparez-le au prix d'un seul client que vous signeriez grâce à la formation — un abonnement Agent Boutique se facture déjà 25 000 à 50 000 F/mois à vos futurs clients.</p></details>
+  <details><summary>Et si je n'arrive pas à trouver de client ?</summary><p>La formation donne les scripts et la méthode, mais le résultat dépend de votre effort de démarchage — comme pour toute activité commerciale. Aucune formation, ici ou ailleurs, ne peut garantir un résultat à votre place.</p></details>
+</section>
+
+<footer>Formation Agents IA Terrain — Cameroun</footer>
+</div>
+</body>
+</html>
